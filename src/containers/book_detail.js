@@ -7,9 +7,20 @@ class BookDetail extends React.Component {
     // }
 
     render(){
+        if(!this.props.activeBook){
+            return(
+                <div>
+                    <h3>Details for:</h3>
+                    <div>Select Book</div>
+                </div>
+            );
+        }
 
         return(
-            <div>{/*this.props.activeBook.title*/}</div>
+            <div>
+                <h3>Details for:</h3>
+                <div>{this.props.activeBook.title}</div>
+            </div>
         );
     }
 }
