@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 class BookList extends React.Component {
     // constructor(props) {
@@ -21,4 +22,10 @@ class BookList extends React.Component {
     }
 }
 
-export default BookList;
+function mapStateToProps(state) {
+    return {
+        books: state.books
+    }
+}
+
+export default connect(mapStateToProps)(BookList);
