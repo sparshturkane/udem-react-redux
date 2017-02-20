@@ -1,5 +1,6 @@
 import React from 'react';
 import BookList from '../containers/book_list'
+import BookDetail from '../containers/book_detail'
 
 class App extends React.Component {
     // constructor(props) {
@@ -10,6 +11,7 @@ class App extends React.Component {
         return(
             <div>
                 <BookList />
+                <BookDetail />
             </div>
         );
     }
